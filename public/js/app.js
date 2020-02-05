@@ -2737,7 +2737,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -73542,9 +73541,9 @@ var render = function() {
         ])
       : _vm._e(),
     _vm._v(" "),
-    _vm.isLoggedIn == "1"
-      ? _c("a", { attrs: { href: _vm.dasboardUrl } }, [_vm._v("Dashboard")])
-      : _c("a", { attrs: { href: _vm.loginUrl } }, [_vm._v("Login")]),
+    _vm.isLoggedIn != "1"
+      ? _c("a", { attrs: { href: _vm.loginUrl } }, [_vm._v("Login")])
+      : _vm._e(),
     _vm._v(" "),
     _vm.isLoggedIn == "1"
       ? _c(
