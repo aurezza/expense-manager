@@ -7,6 +7,19 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+div#app {
+  height: 100vh !important;
+  overflow: hidden;
+
+  .container {
+    height: 100% !important;
+    display: flex;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .header {
   width: 100%;
   text-align: right;

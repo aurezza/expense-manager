@@ -1,6 +1,6 @@
 <template>
     <form id="login-form" method="POST" action="login">
-        <div class="form-group row">
+        <div class="form-group row" style="margin: 0 !important; width: 100%;">
             <span class="col-md-12" style="text-align:center;" :class="{'invalid-feedback' : error == false }" role="alert">
                 <strong ref="loginTips">{{ message }}</strong>
             </span>

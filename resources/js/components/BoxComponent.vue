@@ -142,7 +142,7 @@
                             $this.dialogClosed = true;
                         }, 1500);
                     } else {
-                        $this.dialogMessage = "Save!";
+                        $this.dialogMessage = "Saved!";
                         $this.dialogClosed = false;
                         setTimeout(() => {
                             $this.dialogClosed = true;
@@ -179,7 +179,7 @@
                             $this.dialogClosed = true;
                         }, 1500);
                     } else {
-                        $this.dialogMessage = "Save!";
+                        $this.dialogMessage = "Saved!";
                         $this.dialogClosed = false;
                         setTimeout(() => {
                             $this.dialogClosed = true;

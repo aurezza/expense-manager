@@ -2158,7 +2158,7 @@ __webpack_require__.r(__webpack_exports__);
             $this.dialogClosed = true;
           }, 1500);
         } else {
-          $this.dialogMessage = "Save!";
+          $this.dialogMessage = "Saved!";
           $this.dialogClosed = false;
           setTimeout(function () {
             $this.dialogClosed = true;
@@ -2195,7 +2195,7 @@ __webpack_require__.r(__webpack_exports__);
             $this.dialogClosed = true;
           }, 1500);
         } else {
-          $this.dialogMessage = "Save!";
+          $this.dialogMessage = "Saved!";
           $this.dialogClosed = false;
           setTimeout(function () {
             $this.dialogClosed = true;
@@ -2608,35 +2608,7 @@ __webpack_require__.r(__webpack_exports__);
     action: String
   },
   components: {},
-  methods: {// getListView(callback) {
-    //     axios.get(this.moduleId+'/getlist', { 
-    //                 params: {
-    //                 }
-    //             })
-    //             .then(function (response) {
-    //                 let result = response.data;
-    //                if(typeof callback === "function") {
-    //                     callback(result.data);
-    //                 }
-    //             })
-    //             .catch(function (error) {
-    //                 console.log(error);
-    //             });
-    //     // Request(this.moduleId+'/getlist', {}, 'GET', function(response) {
-    //     //     let result = response.data;
-    //     //     // console.log(result.data);
-    //     //     if(result.error) {
-    //     //         result.message;
-    //     //         return [];
-    //     //     } else {
-    //     //         if(typeof callback === "function") {
-    //     //             callback(result.data);
-    //     //         }
-    //     //     }
-    //     // })
-    //     console.log('getListView');
-    // }
-  },
+  methods: {},
   mounted: function mounted() {}
 });
 
@@ -2844,6 +2816,8 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../utils/common */ "./resources/js/utils/common.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -2876,20 +2850,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
-/* harmony default export */ __webpack_exports__["default"] = ({
+/* harmony default export */ __webpack_exports__["default"] = (_defineProperty({
   mounted: function mounted() {
     console.log('Sidebar mounted.');
   },
   props: {
     user: String,
-    auth: Object,
-    rolename: String
+    auth: Object // rolename: String
+
   },
   data: function data() {
-    return {};
-  },
-  methods: {}
-});
+    return {
+      rolename: ''
+    };
+  }
+}, "mounted", function mounted() {
+  console.log('user', auth);
+
+  if (auth.name) {
+    this.rolename = auth.name;
+  }
+}));
 
 /***/ }),
 
@@ -73697,9 +73678,7 @@ var render = function() {
     _c("div", { staticClass: "profile-box" }, [
       _c("div", { staticClass: "profile-pic" }),
       _vm._v(" "),
-      _c("span", [
-        _vm._v(_vm._s(_vm.auth.name) + "(" + _vm._s(_vm.rolename) + ")")
-      ])
+      _c("span", [_vm._v(_vm._s(_vm.auth.name))])
     ]),
     _vm._v(" "),
     _c("ul", [

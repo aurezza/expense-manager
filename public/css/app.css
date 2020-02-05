@@ -10884,6 +10884,15 @@ a.text-dark:focus {
   }
 }
 
+div#app {
+  height: 100vh;
+  overflow: hidden;
+}
+
+div#app .container {
+  height: 100%;
+}
+
 .header {
   width: 100%;
   text-align: right;

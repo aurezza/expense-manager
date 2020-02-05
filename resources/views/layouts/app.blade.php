@@ -21,10 +21,7 @@
 <body>
     <div id="app">
         
-        <v-sidebar
-            :auth="{{ Auth::user() }}"
-            :rolename="{{ json_encode(Auth::user()) }}"
-        ></v-sidebar>
+        <v-sidebar :auth="{{ Auth::user() }}" ></v-sidebar>
         @if (Route::has('login'))
             <v-header
                 dasboard-url="{{ url('/dashboard') }}"
