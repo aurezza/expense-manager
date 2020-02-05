@@ -23,7 +23,7 @@
         
         <v-sidebar
             :auth="{{ Auth::user() }}"
-            :rolename="{{ json_encode(Auth::user()->role()->name) }}"
+            :rolename="{{ json_encode(Auth::user()) }}"
         ></v-sidebar>
         @if (Route::has('login'))
             <v-header

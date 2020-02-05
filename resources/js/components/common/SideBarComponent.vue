@@ -2,7 +2,7 @@
 <div class="sidenav">
     <div class="profile-box">
         <div class="profile-pic"></div>
-        <span>{{ auth.name }}({{ rolename }})</span>
+        <span>{{ auth.name }}</span>
     </div>
     <ul>
         <li>
@@ -39,15 +39,18 @@
         props: {
             user: String,
             auth: Object,
-            rolename: String
+            // rolename: String
         },
         data() {
-            return {
-
-            }
+          return {
+            rolename: ''
+          }
         },
-        methods: {
-
+        mounted() {
+          console.log('user', auth);
+          if(auth.name) {
+            this.rolename = auth.name;
+          }
         }
     }
 </script>
