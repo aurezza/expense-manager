@@ -1,8 +1,7 @@
 <template>
 <div class="header">
     <a class="disabled-link" v-if="isLoggedIn == '1'" href="#">Welcome to Exprense Manager</a>
-    <a v-if="isLoggedIn == '1'" v-bind:href="dasboardUrl ">Dashboard</a>
-    <a v-else v-bind:href="loginUrl">Login</a>
+    <a v-if="isLoggedIn != '1'" v-bind:href="loginUrl">Login</a>
     <a v-if="isLoggedIn == '1'" v-on:click="submitForm($event)">Logout</a>
     <a v-if="hasRegisterRoute == '1'" v-bind:href="registerUrl">Register</a>
     <form id="logout-form" v-bind:action="logoutUrl" method="POST" style="display: none;">

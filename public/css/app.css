@@ -10885,12 +10885,16 @@ a.text-dark:focus {
 }
 
 div#app {
-  height: 100vh;
+  height: 100vh !important;
   overflow: hidden;
 }
 
 div#app .container {
-  height: 100%;
+  height: 100% !important;
+  display: flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {

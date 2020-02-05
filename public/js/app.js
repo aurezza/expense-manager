@@ -3078,10 +3078,8 @@ __webpack_require__.r(__webpack_exports__);
         password: this.password,
         _token: $('meta[name="csrf-token"]').attr('content')
       };
-      Object(_utils_common__WEBPACK_IMPORTED_MODULE_0__["Request"])('loginv2', data, 'POST', function (response) {
+      Object(_utils_common__WEBPACK_IMPORTED_MODULE_0__["Request"])('login', data, 'POST', function (response) {
         var result = response.data;
-        console.log(response);
-        console.log(result.message);
 
         if (result.error) {
           $this.message = result.message;
@@ -73824,15 +73822,27 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "row justify-content-center" }, [
-    _c("div", { staticClass: "col-md-8" }, [
-      _c("div", { staticClass: "card" }, [
-        _c("div", { staticClass: "card-header" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [_c("login-form-component")], 1)
+  return _c(
+    "div",
+    {
+      staticClass: "row justify-content-center",
+      staticStyle: { margin: "0 !important", width: "100%" }
+    },
+    [
+      _c("div", { staticClass: "col-md-8" }, [
+        _c("div", { staticClass: "card" }, [
+          _c("div", { staticClass: "card-header" }),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "card-body" },
+            [_c("login-form-component")],
+            1
+          )
+        ])
       ])
-    ])
-  ])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

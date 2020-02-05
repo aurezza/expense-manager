@@ -1,10 +1,10 @@
 <template>
     <form id="login-form" method="POST" action="login">
-        <div class="form-group row" style="margin: 0 !important; width: 100%;">
+        <div class="form-group row">
             <span class="col-md-12" style="text-align:center;" :class="{'invalid-feedback' : error == false }" role="alert">
                 <strong ref="loginTips">{{ message }}</strong>
             </span>
-        </div>
+        </div> 
         <div class="form-group row">
             <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>
 
@@ -64,10 +64,8 @@
                     _token: $('meta[name="csrf-token"]').attr('content')
                 };
 
-                Request('loginv2', data, 'POST', function(response) {
+                Request('login', data, 'POST', function(response) {
                     let result = response.data;
-                    console.log(response);
-                    console.log(result.message);
                     if(result.error) {
                         $this.message = result.message;
                     } else {
