@@ -6,7 +6,3 @@ Expense Manager built with Laravel &amp; Vue JS
 - composer install
 - php artisan migrate
 - php artisan db:seed --class=DatabaseSeeder
-
-## Default credentials
-email: admin@gmail.com 
-password: admin123
